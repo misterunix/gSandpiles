@@ -189,7 +189,7 @@ func (g *grid) SaveImage() {
 	png.Encode(f, img)
 	f.Close()
 
-	imgShow := fmt.Sprintf("![%d-%d-%d-%d](%s)", g.Width, g.Height, g.Bits, len(g.Cells), filename)
+	imgShow := fmt.Sprintf("![%d-%d-%d-%d](%s)", g.Width, g.Height, g.Bits, len(g.Cells), "../../"+filename)
 	d := fmt.Sprintf("%s|%d|%d|%d|%d|%s|  \n", Seconds2Days(g.RunTime), g.Width, g.Height, g.Bits, 1<<g.Bits, imgShow)
 
 	fp := fmt.Sprintf("runreports/%s/", System.Unique)
